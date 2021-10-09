@@ -1,0 +1,128 @@
+    @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .body {
+        background-image: url("../img/bg.jpg");
+        height: 100vh;
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #scoreBox {
+        position: absolute;
+        top: 9px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        font-family: 'New Tegomin', serif;
+    }
+    
+    #hiscoreBox {
+        position: absolute;
+        top: 59px;
+        right: 70px;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        font-family: 'New Tegomin', serif;
+    }
+    
+    .brd {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #logo {
+        top: 50px;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+    
+    #board {
+        background: linear-gradient(rgba(27, 161, 38, 0.301), rgb(60, 121, 73));
+        width: 700px;
+        height: 500px;
+        border: 2px solid black;
+        display: grid;
+        grid-template-rows: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 1fr);
+    }
+    
+    span {
+        margin: auto;
+    }
+    
+    #btn {
+        padding: 0.5rem 1.5rem;
+        border: 1px solid black;
+        border-radius: 50px;
+        outline: none;
+        background-image: linear-gradient(to bottom right, rgb(14, 80, 23), rgb(62, 133, 85));
+    }
+    
+    #btn:hover {
+        transform: translateX(2px);
+        cursor: pointer;
+    }
+    
+    .head {
+        background: linear-gradient(rgb(29, 18, 18), rgb(47, 46, 46));
+        transform: scale(1.1);
+        border-radius: 50px;
+    }
+    
+    .snake {
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .food {
+        background: rgb(146, 5, 16);
+    }
+    
+    #gameover {
+        height: 200px;
+        width: 500px;
+        background: linear-gradient(#740404, #6b2826);
+        color: white;
+        font-size: 2.5em;
+        line-height: 50px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        position: absolute;
+        top: 250px;
+        left: 425px;
+        z-index: 2;
+        display: none;
+    }
+    
+    #go {
+        padding: 40px 10px 10px 10px;
+    }
+    
+    @media (max-width:800px) {
+        #board {
+            width: 75vw;
+            height: 60vh;
+        }
+        #btn {
+            padding: 0.3rem 1rem;
+        }
+        #logo {
+            padding: 20px;
+        }
+        #scoreBox,
+        #hiscoreBox {
+            position: inherit;
+        }
+    }
